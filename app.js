@@ -27,7 +27,7 @@ app.get('/', function(req, res){
   if(!req.session.username && !req.session.password){
     res.redirect('/login');
   }else{
-    res.render('main');
+    res.render('main', {user: req.session});
   }
 
 });
@@ -44,9 +44,6 @@ app.get('/login', function(req, res){
 
 });
 
-// app.get('/userInfo', function(req, res){
-//   res.render('user-info');
-// });
 let messages = [];
 app.post('/login', function(req, res){
   messages = [];
@@ -71,13 +68,6 @@ app.post('/login', function(req, res){
 
 
 });
-
-
-
-
-
-
-
 
 app.listen(3000, function(req, res){
   console.log('Party Time !');

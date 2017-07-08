@@ -8,9 +8,12 @@
   <body>
     <div class="mainDiv">
       <p>It looks like you are logged in.</p>
-      <p></p>
+      {{#user}}
       <br>
+      <p>You are logged in as "{{req.session.username}}",</p>
+      <p>and your password is "{{req.session.password}}".</p>
 
+      {{/user}}
     </div>
   </body>
 </html>

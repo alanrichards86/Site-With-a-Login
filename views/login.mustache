@@ -3,17 +3,22 @@
     <head>
       <meta charset="utf-8">
       <link rel="stylesheet" href="/css/login.css">
-      <title>Your Login Page</title>
+      <title>Login Page</title>
     </head>
     <body>
+
         {{#errors}}
       <p>{{.}}</p>
         {{/errors}}
       <br>
 
       <form class="loginForm" action="/login" method="post">
+        <label for="">Username</label>
+        <br>
         <input class="mainUser" type="text" name="username" value="" placeholder="Username Goes Here">
         <hr>
+        <label for="">Password</label>
+        <br>
         <input class="mainPass" type="password" name="password" value="" placeholder="Password Goes Here">
         <hr>
         <button type="submit">Submit</button>
