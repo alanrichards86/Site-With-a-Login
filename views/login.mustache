@@ -6,7 +6,12 @@
       <title>Your Login Page</title>
     </head>
     <body>
-      <form class="loginForm" action="/userInfo" method="post">
+        {{#errors}}
+      <p>{{.}}</p>
+        {{/errors}}
+      <br>
+
+      <form class="loginForm" action="/login" method="post">
         <input class="mainUser" type="text" name="username" value="" placeholder="Username Goes Here">
         <hr>
         <input class="mainPass" type="password" name="password" value="" placeholder="Password Goes Here">
